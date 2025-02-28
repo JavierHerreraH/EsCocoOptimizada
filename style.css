@@ -1,0 +1,539 @@
+@import url('https://fonts.cdnfonts.com/css/apple-chancery');
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 30px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: hsl(25, 100%, 24%);
+    text-decoration: underline;
+}
+
+.navbar-collapse {
+    position: relative;
+}
+
+.navbar-collapse.show::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-collapse.show::before {
+    opacity: 1;
+}
+
+.navbar-nav {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar-collapse.show .nav-link {
+    color: #fff !important; 
+}
+
+.navbar-collapse.show .nav-link:hover {
+    color: #ddd;
+}
+
+.navbar-toggler {
+    position: relative;
+    z-index: 3;
+}
+
+
+
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+.seccion1 {
+    background-image: url('img/fondo.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120%; 
+    width: 100%;
+    color: white; 
+}
+.seccion1 h1 {
+    font-family: 'Apple Chancery';                                            
+    font-size: 15vw;
+    color: #000000;
+}
+
+.section .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.section .text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.section .text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section .text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.section .text .button {
+    display: inline-block;
+    background-color: hsl(25, 100%, 24%);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.section .text .button:hover {
+    background-color: hsl(25, 90%, 30%);
+}
+
+.section .images {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.section .images .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section .images .column img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section .images .large-image {
+    display: flex;
+    align-items: center;
+}
+
+.section .images .large-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la Sección 3 */
+.section:nth-child(3) {
+    background-color: #dee2e6;
+    padding: 40px 20px;
+    color: #333;
+}
+.footer {
+    background-color: #dee2e6;
+    padding: 40px 20px;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section:nth-child(3) p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 100px;
+}
+
+.contact-info li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: hsl(25, 100%, 24%);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #d9534f;
+}
+
+.maps-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.maps-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.maps-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .section .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section .images {
+        padding-top: 90px;
+        flex: 1;
+        display: flex;
+        gap: 10px;
+    }
+
+    .section .images .column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .section .images .column img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 5px;
+        object-fit: cover;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section .images .large-image {
+        display: flex;
+        align-items: center;
+    }
+
+    .section .images .large-image img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 5px;
+        object-fit: cover;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info,
+    .maps-container {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .contact-info ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .contact-info li {
+        margin-bottom: 10px;
+    }
+
+    .maps-container {
+        margin-top: 20px;
+    }
+
+    .maps-container img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+}
+
+
+.section:nth-child(1) { background-color: #f8f9fa; }
+.section:nth-child(2) { background-color: #e9ecef; }
+.section:nth-child(3) { background-color: #dee2e6; }
+
+/*Carta/*
+/* Menú lateral */
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    z-index: 100;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar ul li a:hover {
+    color: hsl(25, 100%, 24%);
+    text-decoration: underline;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: hsl(25, 100%, 24%);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #d9534f;
+}
+
+.maps-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.maps-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#entrantes, #ensaladas, #arroces, #pa, #snacks, #carnes, #pescados, #pizzas, #salsas, #postres {
+    scroll-margin-top: 100px;
+}
+
+.menu-item {
+    background-color: #444444;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 300px;
+    min-height: 200px;
+    
+}
+
+.menu-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+}
+
+.menu-item h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #444444;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    padding: 5px 10px;
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 5px;
+    box-sizing: content-box;
+}
+
+.escalope-de-pollo {
+    background-image: url('img/escalopepollo.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.escalope-de-cerdo {
+    background-image: url('img/escalopecerdo.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.cordon-bleu-pollo {
+    background-image: url('img/cordonbleupollo.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.cordon-bleu-cerdo {
+    background-image: url('img/cordonbleucerdo.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.lomo-a-la-plancha {
+    background-image: url('img/lomoalaplancha.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.pechuga-pollo-plancha {
+    background-image: url('img/pechugapolloplancha.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.solomillo-cerdo {
+    background-image: url('img/solomillo.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.chuletas-cordero {
+    background-image: url('img/chuletascordero.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.paletilla-cordero {
+    background-image: url('img/paletilladecordero.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.entrecote-ternera {
+    background-image: url('img/entrectoternera.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.solomillo-ternera {
+    background-image: url('img/solomilloternera.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
+
+.lechona-domingos {
+    background-image: url('img/lechonadomingos.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+}
