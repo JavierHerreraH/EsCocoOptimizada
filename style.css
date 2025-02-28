@@ -91,18 +91,6 @@ body {
     align-items: center;
     scroll-snap-align: start;
 }
-.seccion1 {
-    background-image: url('img/fondo.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 120%; 
-    width: 100%;
-    color: white; 
-}
-.seccion1 img {
-    width: 30%;
-}
 
 .section .content {
     display: flex;
