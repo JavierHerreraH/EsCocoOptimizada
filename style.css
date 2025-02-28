@@ -100,10 +100,8 @@ body {
     width: 100%;
     color: white; 
 }
-.seccion1 h1 {
-    font-family: 'Apple Chancery';                                            
-    font-size: 15vw;
-    color: #000000;
+.seccion1 img {
+    width: 30%;
 }
 
 .section .content {
